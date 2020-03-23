@@ -1,0 +1,9 @@
+<launch>
+  <!-- Convert it into a point cloud -->
+  <node pkg="nodelet" type="nodelet" name="cloudify"
+        args="load depth_image_proc/point_cloud_xyzrgb manager --no-bond">
+    <remap from="depth_registered/image_rect" to="/camera/depth/image"/>
+    <remap from="rgb/image_rect_color" to="/camera/color/image_raw"/>
+    <remap from="rgb/camera_info" to="/camera/color/camera_info"/>
+  </node>
+</launch>

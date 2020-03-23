@@ -1,0 +1,21 @@
+<launch>
+  <node name="perception_node" pkg="yolo2mark" type="perception_node" output="screen"><!-- launch-prefix="gdb -ex run __args"-->>
+    <rosparam>
+      cloud_topic: "/cloud"
+      world_frame: "camea_frame"
+      camera_frame: "camera_link"
+      voxel_leaf_size: 0.001 <!-- mm -->
+      x_filter_min: -2.5 <!-- m -->
+      x_filter_max: 2.5 <!-- m -->
+      y_filter_min: -2.5 <!-- m -->
+      y_filter_max: 2.5 <!-- m -->
+      z_filter_min: -2.5 <!-- m -->
+      z_filter_max: 5 <!-- m -->
+      plane_max_iterations: 100
+      plane_distance_threshold: 0.03
+      cluster_tolerance: 0.01
+      cluster_min_size: 250
+      cluster_max_size: 500000
+    </rosparam>
+  </node>
+</launch>
