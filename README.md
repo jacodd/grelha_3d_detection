@@ -1,3 +1,5 @@
 # grelha_3d_detection
 
-datset: https://github.com/jacodd/grelha_dataset/tree/master
+ROS Nodes for projetcting yolo bb's in 3d.
+
+
